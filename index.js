@@ -7,7 +7,7 @@ const spotify = new SpotifyWebAPI({
     clientSecret: ''
 });
 
-app.use('/', function (req, res, next) {
+app.get('/', function (req, res, next) {
     // in this case we are using the Client Credential Flow
     spotify.clientCredentialsGrant().then(
         function(data) {
